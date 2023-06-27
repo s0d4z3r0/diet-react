@@ -1,0 +1,49 @@
+.form{
+    border: 1px solid black;
+    width: 52rem;
+    padding: 2rem;
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+label{
+    margin: 0.5rem 0;
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+}
+span{
+    border: 1px solid gainsboro;
+    font-size: 1.2rem;
+    padding: 0.2rem 1rem;
+    background-color: #f0f0f0;
+    border-radius: 5px 0px 0px 5px;
+    text-align: center;
+}
+input{
+    font-size: 1.2rem;
+    padding: 0.2rem 1rem;
+    border: 1px solid gainsboro;
+    border-radius: 0px 5px 5px 0px;
+}
+select{
+    width: 40rem;
+    font-size: 1.2rem;
+    padding: 0.125rem 1rem;
+    border: 1px solid gainsboro;
+    border-radius: 0px 5px 5px 0px;
+}
+button{
+    margin-top: 2rem;
+    border: 1px solid #7ac97a;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0.2rem 1rem;
+    background-color: #87e087;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+button:hover{
+    background-color: #a1e2a1;
+}
