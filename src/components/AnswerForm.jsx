@@ -1,6 +1,6 @@
 import './AnswerForm.css'
 
-const AnswerForm = () => {
+const AnswerForm = ({tmb, get}) => {
   return (
     <div className='answerForm'>AnswerForm</div>
   )
