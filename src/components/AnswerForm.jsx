@@ -1,7 +1,6 @@
 import "./AnswerForm.css";
 
 const AnswerForm = ({ VET }) => {
-  console.log(VET);
   return (
     <div className={`${VET === "0" ? 'hide' : 'show'} answerForm`}>
       {VET === "0" ? (
