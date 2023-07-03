@@ -6,12 +6,15 @@ const Form = () => {
   const [gender, setGender] = useState("");
   const [weight, setWeight] = useState("");
   const [height, setHeight] = useState("");
+  const [lifestyleOption, setLifestyleOption] = useState("");
   const [lifestyle, setLifestyle] = useState("");
+  const [objectiveOption, setObjectiveOption] = useState("");
   const [objective, setObjective] = useState("");
 
-  const [TMB, setTMB] = useState("");
-  const [GET, setGET] = useState("");
-  const [VET, setVET] = useState("");
+  const [TMB, setTMB] = useState(0);
+  const [GET, setGET] = useState('');
+  const [VET, setVET] = useState('');
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -29,78 +32,74 @@ const Form = () => {
     } else if (height <= 0 || height === "" || height.toString().length > 3) {
       alert("Digite uma Altura (em cm) válida.");
       return;
-    } else if (lifestyle === "") {
+    } else if (lifestyleOption === "") {
       alert("Selecione o Nível de Atividade.");
       return;
-    } else if (objective === "") {
+    } else if (objectiveOption === "") {
       alert("Selecione seu Objetivo.");
       return;
     }
 
-    // Definir GET e VET dependendo o gender (Refazer para definir instantaneamente)
-    if (gender === "M") {
-      setTMB(
-        66 +
-          13.8 * parseFloat(weight) +
-          5.0 * parseInt(height) -
-          6.8 * parseInt(age)
-      );
-      setGET(parseFloat(TMB) * parseFloat(lifestyle));
-      setVET(
-        objective <= 500
-          ? parseInt(GET) - parseInt(objective)
-          : parseInt(GET) + parseInt(objective)
-      );
-    } else {
-      setTMB(
-        655 +
-          9.6 * parseFloat(weight) +
-          1.9 * parseInt(height) -
-          4.7 * parseInt(age)
-      );
-      setGET(parseFloat(TMB) * parseFloat(lifestyle));
-      setVET(
-        objective <= 500
-          ? parseInt(GET) - parseInt(objective)
-          : parseInt(GET) + parseInt(objective)
-      );
+    // Nível de Atividade
+    switch (lifestyleOption) {
+      case "SE":
+        setLifestyle(1.4);
+        break;
+      case "PA":
+        setLifestyle(1.5);
+        break;
+      case "A":
+        setLifestyle(1.6);
+        break;
+      case "MA":
+        setLifestyle(1.7);
+        break;
+      case "EA":
+        setLifestyle(1.9);
+        break;
+      default:
+        break;
     }
 
-    /*
+    // Objetivo
+    switch (objectiveOption) {
+      case "E":
+        setObjective(-500);
+        break;
+      case "M":
+        setObjective(0);
+        break;
+      case "G":
+        setObjective(500);
+        break;
+      default:
+        break;
+    }
+
+    // Definir TMB
     setTMB(
       gender === "M"
         ? 66 + 13.8 * weight + 5.0 * height - 6.8 * age
         : 655 + 9.6 * weight + 1.9 * height - 4.7 * age
     );
 
-    setGET(parseInt(TMB) * parseFloat(lifestyle));
+    // Definir GET
+    setGET(TMB * lifestyle);
 
-    switch (objective) {
-      case "500":
-        setVET(parseInt(GET) - 500);
-        break;
-      case "0":
-        setVET(parseInt(GET));
-        break;
-      case "501":
-        setVET(parseInt(GET) + 500);
-        break;
-      default:
-        break;
-    }
-    */
+    // Definir VET
+    setVET(GET + objective)
 
     // Reset states
     console.log(age, gender, weight, height, lifestyle, objective);
-    console.log(`TMB = ${parseInt(TMB)}`);
-    console.log(`GET = ${parseInt(GET)}`);
-    console.log(`VET = ${parseInt(VET)}`);
+    console.log(`TMB = ${TMB}`);
+    console.log(`GET = ${GET}`);
+    console.log(`VET = ${VET}`);
     setAge("");
     setGender("");
     setWeight("");
     setHeight("");
-    setLifestyle("");
-    setObjective("");
+    setLifestyleOption("");
+    setObjectiveOption("");
   };
 
   return (
@@ -145,23 +144,21 @@ const Form = () => {
         <label>
           <span>Nível de Atividade:</span>
           <select
-            onChange={(e) => setLifestyle(e.target.value)}
-            value={lifestyle}
+            onChange={(e) => setLifestyleOption(e.target.value)}
+            value={lifestyleOption}
           >
             <option value=""></option>
-            <option value="1.2">
-              Sedentário (sem exercício/esporte algum)
-            </option>
-            <option value="1.375">
+            <option value="SE">Sedentário (sem exercício/esporte algum)</option>
+            <option value="PA">
               Pouco ativo (exercício/esporte leve 1-3 dias/semana)
             </option>
-            <option value="1.55">
+            <option value="A">
               Moderadamente ativo (exercício/esporte moderado 3-5 dias/semana)
             </option>
-            <option value="1.725">
+            <option value="MA">
               Muito ativo (exercício/esporte pesado 6-7 dias/semana)
             </option>
-            <option value="1.9">
+            <option value="EA">
               Extremamente ativo (exercício/esporte muito pesado e trabalho
               físico diariamente ou treino 2x ao dia)
             </option>
@@ -170,20 +167,20 @@ const Form = () => {
         <label>
           <span>Objetivo:</span>
           <select
-            onChange={(e) => setObjective(e.target.value)}
-            value={objective}
+            onChange={(e) => setObjectiveOption(e.target.value)}
+            value={objectiveOption}
           >
             <option value=""></option>
-            <option value="501">Ganhar peso</option>
-            <option value="0">Manter</option>
-            <option value="500">Emagrecer</option>
+            <option value="E">Emagrecer</option>
+            <option value="M">Manter</option>
+            <option value="G">Ganhar peso</option>
           </select>
         </label>
         <button type="submit">CALCULAR</button>
       </form>
-      {Math.floor(TMB)}
-      <p>{Math.floor(GET)}</p>
-      <p>{Math.floor(VET)}</p>
+      <p>{Math.floor(TMB) ? Math.floor(TMB) : ""}</p>
+      <p>{Math.floor(GET) ? Math.floor(GET) : ""}</p>
+      <p>{Math.floor(VET) ? Math.floor(VET) : ""}</p>
     </div>
   );
 };
