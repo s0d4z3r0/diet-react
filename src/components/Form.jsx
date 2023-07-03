@@ -90,8 +90,6 @@ const Form = () => {
     setLifestyleOption("");
     setObjectiveOption("");
   };
-  // Definir Taxa Metabólica
-  const TM = TMB
 
   // Definir GET
   const GET = TMB * lifestyle
@@ -175,7 +173,7 @@ const Form = () => {
         </label>
         <button type="submit">CALCULAR</button>
       </form>
-      <AnswerForm TB={TM} GET={GET} VET={VET} objectiveOption={objectiveOption}/>
+      <AnswerForm VET={VET}/>
     </div>
   );
 };
