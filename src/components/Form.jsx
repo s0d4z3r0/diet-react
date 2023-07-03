@@ -1,3 +1,5 @@
+import AnswerForm from './AnswerForm.jsx'
+
 import { useState } from "react";
 import "./Form.css";
 
@@ -11,10 +13,7 @@ const Form = () => {
   const [objectiveOption, setObjectiveOption] = useState("");
   const [objective, setObjective] = useState("");
 
-  const [TMB, setTMB] = useState(0);
-  const [GET, setGET] = useState('');
-  const [VET, setVET] = useState('');
-
+  const [TMB, setTMB] = useState(0);  
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -83,17 +82,7 @@ const Form = () => {
         : 655 + 9.6 * weight + 1.9 * height - 4.7 * age
     );
 
-    // Definir GET
-    setGET(TMB * lifestyle);
-
-    // Definir VET
-    setVET(GET + objective)
-
     // Reset states
-    console.log(age, gender, weight, height, lifestyle, objective);
-    console.log(`TMB = ${TMB}`);
-    console.log(`GET = ${GET}`);
-    console.log(`VET = ${VET}`);
     setAge("");
     setGender("");
     setWeight("");
@@ -101,6 +90,14 @@ const Form = () => {
     setLifestyleOption("");
     setObjectiveOption("");
   };
+  // Definir Taxa Metabólica
+  const TM = TMB
+
+  // Definir GET
+  const GET = TMB * lifestyle
+
+  // Definir VET
+  const VET = GET + objective
 
   return (
     <div className="form">
@@ -178,9 +175,7 @@ const Form = () => {
         </label>
         <button type="submit">CALCULAR</button>
       </form>
-      <p>{Math.floor(TMB) ? Math.floor(TMB) : ""}</p>
-      <p>{Math.floor(GET) ? Math.floor(GET) : ""}</p>
-      <p>{Math.floor(VET) ? Math.floor(VET) : ""}</p>
+      <AnswerForm TB={TM} GET={GET} VET={VET} objectiveOption={objectiveOption}/>
     </div>
   );
 };

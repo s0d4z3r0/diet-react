@@ -14,7 +14,7 @@ label {
   box-shadow: 0px 0px 5px #ddd;
 }
 span {
-  border: 1px solid gainsboro;
+  border: 1px solid #dcdcdc;
   font-size: 1.2rem;
   padding: 0.2rem 1rem;
   background-color: #f0f0f0;
@@ -24,7 +24,7 @@ span {
 input {
   font-size: 1.2rem;
   padding: 0.2rem 1rem;
-  border: 1px solid gainsboro;
+  border: 1px solid #dcdcdc;
   border-radius: 0px 5px 5px 0px;
 }
 select {
@@ -32,11 +32,11 @@ select {
   background-color: #fff;
   font-size: 1.2rem;
   padding: 0.125rem 1rem;
-  border: 1px solid gainsboro;
+  border: 1px solid #dcdcdc;
   border-radius: 0px 5px 5px 0px;
 }
 button {
-  box-shadow: 0px 0px 5px gainsboro;
+  box-shadow: 0px 0px 5px #dcdcdc;
   margin-top: 2rem;
   border: 1px solid #7ac97a;
   font-size: 1.2rem;

@@ -1,5 +1,23 @@
-.answerForm{
-    border: 1px solid black;
-    width: 52rem;
-    padding: 2rem;
+.answerForm {
+  border: 1px solid #ccc;
+  box-shadow: 0px 0px 5px #ddd;
+  border-radius: 10px;
+  width: 100%;
+  padding: 2rem;
+  margin-top: 4rem;
+}
+
+.result{
+  text-align: center;
+  font-size: 18pt;
+}
+
+.hide{
+  opacity: 0;
+  transition: .5s ease-in-out;
+}
+
+.show{
+  opacity: 1;
+  transition: .5s ease-in-out;
 }

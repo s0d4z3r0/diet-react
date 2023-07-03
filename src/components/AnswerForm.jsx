@@ -1,9 +1,19 @@
-import './AnswerForm.css'
+import "./AnswerForm.css";
 
-const AnswerForm = ({tmb, get}) => {
+const AnswerForm = ({ VET }) => {
+  console.log(VET);
   return (
-    <div className='answerForm'>AnswerForm</div>
-  )
-}
+    <div className={`${VET === "0" ? 'hide' : 'show'} answerForm`}>
+      {VET === "0" ? (
+        ""
+      ) : (
+        <p className="result">
+          Para alcançar seu objetivo ingira{" "}
+          <strong>{Math.floor(VET)}</strong>kcal.
+        </p>
+      )}
+    </div>
+  );
+};
 
-export default AnswerForm
+export default AnswerForm;
