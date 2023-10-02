@@ -7,8 +7,8 @@ const AnswerForm = ({ VET }) => {
         ""
       ) : (
         <p className="result">
-          Para alcançar seu objetivo ingira{" "}
-          <strong>{Math.floor(VET)}</strong>kcal.
+          Para alcançar seu objetivo você deve ingerir aproximadamante: {" "}
+          <span><strong>{Math.floor(VET)}</strong>kcal.</span>
         </p>
       )}
     </div>

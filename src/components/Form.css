@@ -11,21 +11,23 @@ label {
   display: grid;
   grid-template-columns: 2fr 10fr;
   border-radius: 5px;
-  box-shadow: 0px 0px 5px #ddd;
 }
 span {
   border: 1px solid #dcdcdc;
   font-size: 1.2rem;
   padding: 0.2rem 1rem;
-  background-color: #f0f0f0;
   border-radius: 5px 0px 0px 5px;
   text-align: center;
+  background-color: #87a159;
+  border-right: none;
+  color: #fff;
 }
 input {
   font-size: 1.2rem;
   padding: 0.2rem 1rem;
   border: 1px solid #dcdcdc;
   border-radius: 0px 5px 5px 0px;
+  outline: none;
 }
 select {
   width: 40rem;
@@ -34,21 +36,24 @@ select {
   padding: 0.125rem 1rem;
   border: 1px solid #dcdcdc;
   border-radius: 0px 5px 5px 0px;
+  outline: none;
 }
 button {
-  box-shadow: 0px 0px 5px #dcdcdc;
   margin-top: 2rem;
-  border: 1px solid #7ac97a;
+  border: 1px solid rgba(101, 126, 60, .3);
+  color: #fff;
+  text-shadow: -1px 1px 3px #000;
   font-size: 1.2rem;
   font-weight: bold;
   padding: 0.2rem 1rem;
-  background-color: #87e087;
+  background-color: #94c442;
   border-radius: 5px;
   text-align: center;
   cursor: pointer;
+  transition: 100ms ease-in-out;
 }
 button:hover {
-  background-color: #a1e2a1;
+  background-color: #87a159;
 }
 input[type="number"],
 input::-webkit-outer-spin-button,

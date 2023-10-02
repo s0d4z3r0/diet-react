@@ -112,7 +112,7 @@ const Form = () => {
         <label>
           <span>Sexo:</span>
           <select onChange={(e) => setGender(e.target.value)} value={gender}>
-            <option value=""></option>
+            <option value="" disabled>Selecione seu sexo</option>
             <option value="M">Masculino</option>
             <option value="F">Feminino</option>
           </select>
@@ -142,7 +142,7 @@ const Form = () => {
             onChange={(e) => setLifestyleOption(e.target.value)}
             value={lifestyleOption}
           >
-            <option value=""></option>
+            <option value="" disabled>Selecione seu nível de atividade</option>
             <option value="SE">Sedentário (sem exercício/esporte algum)</option>
             <option value="PA">
               Pouco ativo (exercício/esporte leve 1-3 dias/semana)
@@ -165,7 +165,7 @@ const Form = () => {
             onChange={(e) => setObjectiveOption(e.target.value)}
             value={objectiveOption}
           >
-            <option value=""></option>
+            <option value="" disabled>Selecione seu objetivo</option>
             <option value="E">Emagrecer</option>
             <option value="M">Manter</option>
             <option value="G">Ganhar peso</option>

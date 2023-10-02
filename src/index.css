@@ -10,3 +10,37 @@
     box-sizing: border-box;
     font-family: var(--font-kanit);
 }
+
+.diet_bg{
+    height: 993px;
+    padding: 4rem 0;
+    background-image: url(./assets/bg-diet.jpg);
+    background-size: cover;
+    background-position: 50%;
+}
+.diet_bg_layer{
+    height: 993px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 4rem 0;
+    background-color: rgba(0, 0, 0, .6);
+}
+.diet{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
+    gap: 2rem;
+    padding: 4rem 2rem;
+    width: fit-content;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, .9);
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+}
+.diet h1{
+    color: #000;
+    font-size: 2.5rem;
+}
