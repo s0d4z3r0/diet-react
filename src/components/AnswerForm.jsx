@@ -2,14 +2,14 @@ import "./AnswerForm.css";
 
 const AnswerForm = ({ VET }) => {
   return (
-    <div className={`${VET === "0" ? 'hide' : 'show'} answerForm`}>
+    <div className={`${VET === "0" ? "hide" : "show"} answerForm`}>
       {VET === "0" ? (
         ""
       ) : (
-        <p className="result">
-          Para alcançar seu objetivo você deve ingerir aproximadamante: {" "}
-          <span><strong>{Math.floor(VET)}</strong>kcal.</span>
-        </p>
+        <div className="result">
+          <p>Para alcançar seu objetivo você deve ingerir:</p>
+          <p>{Math.floor(VET)}kcal.</p>
+        </div>
       )}
     </div>
   );
