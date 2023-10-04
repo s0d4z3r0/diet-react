@@ -1,80 +1,118 @@
-@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Kanit&display=swap");
 
-:root{
-    --font-kanit:  'Kanit', sans-serif;
-}
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: var(--font-kanit);
+:root {
+  --font-kanit: "Kanit", sans-serif;
 }
 
-html{
-    background-image: url(./assets/bg-diet.jpg);
-    width: 100%;
-    /* height: 174.5vh; */
-    /* height: 100%; */
-    height: 32.8rem;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50%;
-}
-.diet_bg_layer{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    /* height: 174.5vh; */
-    padding: 1rem 0;
-    /* height: 100%; */
-    
-    height: 32.8rem;
-    background-color: rgba(0, 0, 0, .6);
-}
-.diet{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* gap: 2rem; */
-    /* padding: 4rem 2rem; */
-    /* width: fit-content; */
-    width: 75%;
-    height: 27rem;
-    /* height: 100%; */
-    padding: 1rem .5rem;
-    gap: 0.5rem;
-    margin: 5% auto;
-    background-color: rgba(255, 255, 255, .9);
-    border-radius: 20px;
-    backdrop-filter: blur(5px);
-}
-.diet h1{
-    color: #000;
-    /* font-size: 2.5rem; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 10%;
-    font-size: 5vw;
-    border: 1px solid red;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-kanit);
 }
 
-@media (min-height: 525px){
-    html{
-        height: 100%;
-    }
-    .diet_bg_layer{
-        height: 100%;
-    }
-    .diet{
-        height: 95%;
-    }
+html {
+  background-image: url(./assets/bg-diet.jpg);
+  width: 100%;
+  height: 32.8rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%;
 }
-@media (min-height: 768px){
-    .diet h1{
-        font-size: 2vh;
-    }
+.diet_bg_layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 0;
+
+  height: 32.8rem;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.diet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 75%;
+  height: 27rem;
+  padding: 1rem 0.5rem;
+  gap: 0.5rem;
+  margin: 5% auto;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  backdrop-filter: blur(5px);
+}
+.diet h1 {
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  font-size: 5vw;
+}
+
+@media (min-height: 525px) {
+  html {
+    height: 100%;
   }
+  .diet_bg_layer {
+    height: 100%;
+  }
+  .diet {
+    height: 95%;
+  }
+}
+@media (min-height: 768px) {
+  .diet {
+    height: 94%;
+  }
+  .diet h1 {
+    font-size: 2vh;
+  }
+}
+@media (min-width: 469px) {
+  .diet {
+    height: 90%;
+  }
+}
+@media (min-width: 469px) and (min-height: 640px) {
+  .diet {
+    height: 95%;
+  }
+}
+@media (min-width: 665px) {
+  .diet_bg_layer {
+    height: 38.5rem;
+  }
+  .diet {
+    height: 90%;
+  }
+}
+@media (min-width: 665px) and (min-height: 616px) {
+  .diet_bg_layer {
+    height: 100%;
+  }
+  .diet h1 {
+    font-size: 4vh;
+  }
+}
+@media (min-width: 900px) {
+  .diet {
+    width: 52rem;
+  }
+  .diet h1 {
+    font-size: 2.5rem;
+  }
+}
+@media (min-width: 900px) and (min-height: 616px) {
+  .diet_bg_layer {
+    height: 100%;
+  }
+  .diet {
+    width: 52rem;
+    height: 92%;
+  }
+  .diet h1 {
+    font-size: 2.5rem;
+  }
+}

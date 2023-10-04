@@ -1,21 +1,16 @@
 .form {
-  border: 1px solid red;
-  /* width: 52rem; */
-  /* padding: 2rem; */
   width: 100%;
-  height: 100%;
-  padding: 0.2rem;
+  height: 66.7%;
+  padding: 1rem;
 }
 form {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: 1px solid blue;
   width: 100%;
   height: 100%;
 }
 label {
-  /* margin: 0.5rem 0; */
   margin: 0.2rem 0;
   display: grid;
   grid-template-columns: 5fr 14fr;
@@ -23,10 +18,8 @@ label {
 }
 span {
   border: 1px solid #dcdcdc;
-  /* font-size: 1.2rem;
-  padding: 0.2rem 1rem; */
   text-align: center;
-  font-size: .8rem;
+  font-size: 0.8rem;
   padding: 0.2rem;
   display: flex;
   align-items: center;
@@ -38,10 +31,8 @@ span {
   color: #fff;
 }
 input {
-  /* font-size: 1.2rem;
-  padding: 0.2rem 1rem; */
   width: 100%;
-  font-size: .8rem;
+  font-size: 0.8rem;
   padding: 0.2rem;
   border: 1px solid #dcdcdc;
   border: none;
@@ -50,11 +41,8 @@ input {
 }
 select {
   background-color: #fff;
-  /* width: 40rem;
-  font-size: 1.2rem;
-  padding: 0.125rem 1rem; */
   width: 100%;
-  font-size: .8rem;
+  font-size: 0.8rem;
   padding: 0.2rem;
   border: none;
   border-left: none;
@@ -62,13 +50,11 @@ select {
   outline: none;
 }
 button {
-  /* margin-top: 2rem; */
   margin-top: 1rem;
-  border: 1px solid rgba(101, 126, 60, .3);
+  border: 1px solid rgba(101, 126, 60, 0.3);
   color: #fff;
   text-shadow: -1px 1px 3px #000;
-  /* font-size: 1.2rem; */
-  font-size: .8rem;
+  font-size: 0.8rem;
   font-weight: bold;
   padding: 0.2rem 1rem;
   background-color: #94c442;
@@ -87,30 +73,72 @@ input::-webkit-inner-spin-button {
   appearance: textfield;
 }
 
-
-@media (min-height: 640px){
+@media (min-height: 640px) {
+  .form {
+    height: 74.8%;
+  }
   label {
     display: flex;
     flex-direction: column;
   }
-  label span{
+  label span {
     border-radius: 5px 5px 0px 0px;
   }
-  label input, label select{
+  label input,
+  label select {
     border-radius: 0px 0px 5px 5px;
+    text-align: center;
   }
 }
-@media (min-height: 768px){
-  span {
-    font-size: 1rem;
+@media (min-height: 768px) {
+  .form {
+    height: 70.8%;
   }
-  input {
-    font-size: 1rem;
-  }
-  select {
-    font-size: 1rem;
-  }
+  span,
+  input,
+  select,
   button {
     font-size: 1rem;
+  }
+}
+@media (min-width: 469px) {
+  .form {
+    height: 75.8%;
+  }
+}
+@media (min-width: 665px) {
+  span,
+  input,
+  select,
+  button {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 665px) and (min-height: 616px) {
+  label {
+    display: grid;
+    grid-template-columns: 5fr 14fr;
+  }
+  label span {
+    padding: 1vh;
+    border-radius: 5px 0px 0px 5px;
+  }
+  label input,
+  label select {
+    padding: 1vh;
+    text-align: left;
+    border-radius: 0px 5px 5px 0px;
+  }
+}
+@media (min-width: 900px) and (min-height: 768px) {
+  .form {
+    width: 52rem;
+    padding: 2rem;
+  }
+  label span,
+  label input,
+  label select,
+  button {
+    font-size: 1.2rem;
   }
 }

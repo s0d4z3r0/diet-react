@@ -1,6 +1,7 @@
 import "./Form.css";
 
-const Form = ({handleSubmit,
+const Form = ({
+  handleSubmit,
   windowSize,
   setAge,
   age,
@@ -13,7 +14,8 @@ const Form = ({handleSubmit,
   setLifestyleOption,
   lifestyleOption,
   setObjectiveOption,
-  objectiveOption}) => {
+  objectiveOption,
+}) => {
   return (
     <div className="form">
       <form onSubmit={handleSubmit}>
@@ -21,7 +23,7 @@ const Form = ({handleSubmit,
           <span>Idade:</span>
           <input
             type="number"
-            placeholder={windowSize >= 450 ? 'Idade em anos' : ''}
+            placeholder={windowSize >= 450 ? "Idade em anos" : ""}
             onChange={(e) => setAge(e.target.value)}
             value={age}
           />
@@ -29,7 +31,13 @@ const Form = ({handleSubmit,
         <label>
           <span>Sexo:</span>
           <select onChange={(e) => setGender(e.target.value)} value={gender}>
-            {windowSize >= 450 ? (<option value="" disabled>Selecione seu sexo</option>) : (<option value="" disabled></option>)}
+            {windowSize >= 450 ? (
+              <option value="" disabled>
+                Selecione seu sexo
+              </option>
+            ) : (
+              <option value="" disabled></option>
+            )}
             <option value="M">Masculino</option>
             <option value="F">Feminino</option>
           </select>
@@ -38,7 +46,7 @@ const Form = ({handleSubmit,
           <span>Peso:</span>
           <input
             type="number"
-            placeholder={windowSize >= 450 ? 'Peso em kg (Ex: 65.5)' : ''}
+            placeholder={windowSize >= 450 ? "Peso em kg (Ex: 65.5)" : ""}
             onChange={(e) => setWeight(e.target.value)}
             value={weight}
             maxLength="4"
@@ -48,7 +56,7 @@ const Form = ({handleSubmit,
           <span>Altura:</span>
           <input
             type="number"
-            placeholder={windowSize >= 450 ? 'Altura em cm (ex: 170)' : ''}
+            placeholder={windowSize >= 450 ? "Altura em cm (ex: 170)" : ""}
             onChange={(e) => setHeight(e.target.value)}
             value={height}
           />
@@ -59,7 +67,13 @@ const Form = ({handleSubmit,
             onChange={(e) => setLifestyleOption(e.target.value)}
             value={lifestyleOption}
           >
-            {windowSize >= 450 ? (<option value="" disabled>Selecione seu nível de atividade</option>) : (<option value="" disabled></option>)}
+            {windowSize >= 450 ? (
+              <option value="" disabled>
+                Selecione seu nível de atividade
+              </option>
+            ) : (
+              <option value="" disabled></option>
+            )}
             <option value="SE">Sedentário (sem exercício/esporte algum)</option>
             <option value="PA">
               Pouco ativo (exercício/esporte leve 1-3 dias/semana)
@@ -82,7 +96,13 @@ const Form = ({handleSubmit,
             onChange={(e) => setObjectiveOption(e.target.value)}
             value={objectiveOption}
           >
-            {windowSize >= 450 ? (<option value="" disabled>Selecione seu objetivo</option>) : (<option value="" disabled></option>)}
+            {windowSize >= 450 ? (
+              <option value="" disabled>
+                Selecione seu objetivo
+              </option>
+            ) : (
+              <option value="" disabled></option>
+            )}
             <option value="E">Emagrecer</option>
             <option value="M">Manter</option>
             <option value="G">Ganhar peso</option>
