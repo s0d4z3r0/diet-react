@@ -58,9 +58,6 @@ html {
   .diet_bg_layer {
     height: 100%;
   }
-  .diet {
-    height: 95%;
-  }
 }
 @media (min-height: 768px) {
   .diet {
@@ -71,21 +68,19 @@ html {
   }
 }
 @media (min-width: 469px) {
+
   .diet {
     height: 90%;
   }
 }
 @media (min-width: 469px) and (min-height: 640px) {
-  .diet {
-    height: 95%;
+  html {
+    height: 100%;
   }
 }
 @media (min-width: 665px) {
   .diet_bg_layer {
     height: 38.5rem;
-  }
-  .diet {
-    height: 90%;
   }
 }
 @media (min-width: 665px) and (min-height: 616px) {
@@ -99,6 +94,7 @@ html {
 @media (min-width: 900px) {
   .diet {
     width: 52rem;
+    height: auto;
   }
   .diet h1 {
     font-size: 2.5rem;
@@ -110,7 +106,6 @@ html {
   }
   .diet {
     width: 52rem;
-    height: 92%;
   }
   .diet h1 {
     font-size: 2.5rem;

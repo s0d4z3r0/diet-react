@@ -1,0 +1,42 @@
+.footer {
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: #000;
+}
+.footer p {
+  width: 100%;
+  font-size: .8rem;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer p span{
+  background-color: #fff;
+}
+.footer p span a {
+  font-size: .8rem;
+  text-decoration: none;
+  font-weight: bold;
+  color: #56854c !important;
+}
+.footer p span a:hover {
+  color: #345c2b !important;
+}
+
+@media (min-width: 425px){
+  .footer p, .footer p span a {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 768px) and (min-height: 768px){
+  .footer {
+    height: 2rem;
+  }
+  .footer p, .footer p span a {
+    font-size: 1.5rem;
+  }
+}

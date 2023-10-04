@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import AnswerForm from "./components/AnswerForm";
 import Form from "./components/Form";
+import Footer from "./components/Footer";
 
 function App() {
   const [age, setAge] = useState("");
@@ -131,6 +132,7 @@ function App() {
         />
         <AnswerForm VET={VET} />
       </div>
+      <Footer/>
     </div>
   );
 }
