@@ -2,9 +2,8 @@
   border: 1px solid #ccc;
   background-color: #fff;
   border-radius: 10px;
-  width: 95%;
+  width: 100%;
   padding: 0.5rem;
-  margin-top: 1rem;
 }
 
 .result {
@@ -32,7 +31,7 @@
   transition: 0.5s ease-in-out;
 }
 
-@media (min-height: 768px) {
+@media (min-width: 425px) {
   .result {
     font-size: 1rem;
   }
@@ -40,14 +39,14 @@
     font-size: 1.5rem;
   }
 }
-@media (min-width: 470px) {
-  .answerForm {
-    margin-top: 0rem;
+@media (min-width: 768px) {
+  .result {
+    flex-direction: row;
   }
 }
-@media (min-width: 665px) {
+@media (min-width: 1024px) {
   .result {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
   .result p:nth-of-type(2) {
     font-size: 1.8rem;

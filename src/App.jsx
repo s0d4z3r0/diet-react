@@ -111,29 +111,41 @@ function App() {
     return () => window.removeEventListener("resize", changeSize);
   });
   return (
-    <div className="diet_bg_layer">
-      <div className="diet">
-        <h1>Calculadora Calórica</h1>
-        <Form
-          handleSubmit={handleSubmit}
-          windowSize={windowSize}
-          setAge={setAge}
-          age={age}
-          setGender={setGender}
-          gender={gender}
-          setWeight={setWeight}
-          weight={weight}
-          setHeight={setHeight}
-          height={height}
-          setLifestyleOption={setLifestyleOption}
-          lifestyleOption={lifestyleOption}
-          setObjectiveOption={setObjectiveOption}
-          objectiveOption={objectiveOption}
-        />
-        <AnswerForm VET={VET} />
+    <>
+      <div className="diet_bg_layer">
+        <div className="diet">
+          <div className="title">
+            <h1>Calculadora Calórica</h1>
+          </div>
+
+          <div className="main_form">
+            <Form
+              handleSubmit={handleSubmit}
+              windowSize={windowSize}
+              setAge={setAge}
+              age={age}
+              setGender={setGender}
+              gender={gender}
+              setWeight={setWeight}
+              weight={weight}
+              setHeight={setHeight}
+              height={height}
+              setLifestyleOption={setLifestyleOption}
+              lifestyleOption={lifestyleOption}
+              setObjectiveOption={setObjectiveOption}
+              objectiveOption={objectiveOption}
+            />
+          </div>
+
+          <div className="main_result">
+            <AnswerForm VET={VET} />
+          </div>
+        </div>
       </div>
-      <Footer/>
-    </div>
+      <div className="footer">
+        <Footer />
+      </div>
+    </>
   );
 }
 

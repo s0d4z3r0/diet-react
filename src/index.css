@@ -14,100 +14,96 @@
 html {
   background-image: url(./assets/bg-diet.jpg);
   width: 100%;
-  height: 32.8rem;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50%;
 }
+
 .diet_bg_layer {
-  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
+  height: 100%;
   padding: 1rem 0;
-
-  height: 32.8rem;
   background-color: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(2px);
 }
 .diet {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: space-around;
   width: 75%;
-  height: 27rem;
-  padding: 1rem 0.5rem;
-  gap: 0.5rem;
-  margin: 5% auto;
+  padding: 1rem 1.5rem;
+  margin: 0 auto 3rem;
   background-color: rgba(255, 255, 255, 0.9);
   border-radius: 20px;
 }
-.diet h1 {
+.title h1 {
   color: #000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
   width: 100%;
   font-size: 5vw;
 }
+.main_form {
+  margin-top: 1rem;
+}
+.main_result {
+  margin-top: 1rem;
+}
+.footer {
+  bottom: 0;
+  left: 0;
+}
 
-@media (min-height: 525px) {
+@media (min-height: 535px) {
   html {
     height: 100%;
   }
   .diet_bg_layer {
+    position: absolute;
     height: 100%;
+    display: flex;
+    align-items: center;
   }
-}
-@media (min-height: 768px) {
   .diet {
-    height: 94%;
+    justify-content: space-around;
   }
-  .diet h1 {
-    font-size: 2vh;
+  .footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
   }
 }
-@media (min-width: 469px) {
+@media (min-width: 768px) {
+  .diet h1 {
+    font-size: 2.4rem;
+  }
+}
+@media (min-width: 768px) and (min-height: 536px) {
+  .diet {
+    height: 29rem;
+    width: 75%;
+  }
+}
+@media (min-width: 768px) and (min-height: 600px) {
+  .diet {
+    height: 31rem;
+  }
+}
 
+@media (min-width: 1024px) {
   .diet {
-    height: 90%;
+    height: 29rem;
+    width: 47rem;
   }
 }
-@media (min-width: 469px) and (min-height: 640px) {
-  html {
-    height: 100%;
-  }
-}
-@media (min-width: 665px) {
-  .diet_bg_layer {
-    height: 38.5rem;
-  }
-}
-@media (min-width: 665px) and (min-height: 616px) {
-  .diet_bg_layer {
-    height: 100%;
-  }
-  .diet h1 {
-    font-size: 4vh;
-  }
-}
-@media (min-width: 900px) {
+@media (min-width: 1024px) and (min-height: 580px) {
   .diet {
-    width: 52rem;
-    height: auto;
+    height: 32rem;
+    width: 47rem;
   }
-  .diet h1 {
-    font-size: 2.5rem;
-  }
-}
-@media (min-width: 900px) and (min-height: 616px) {
-  .diet_bg_layer {
+  .main_form {
     height: 100%;
-  }
-  .diet {
-    width: 52rem;
-  }
-  .diet h1 {
-    font-size: 2.5rem;
+    display: flex;
+    align-items: center;
   }
 }
